@@ -1,0 +1,282 @@
+{
+  "users": [
+    {
+      "id": "usr_admin_default",
+      "email": "admin@gsmgateway.local",
+      "name": "GSM Gateway Admin",
+      "passwordHash": "6f4ae41a1980e463f2ea988b3fc91582a416d3e1d9a6d80674c540cb07269435",
+      "role": "admin",
+      "createdAt": "2026-09-24T18:09:02.724Z"
+    }
+  ],
+  "apiKeys": [
+    {
+      "id": "key_primary_live",
+      "userId": "usr_admin_default",
+      "name": "Production Server REST Key",
+      "key": "gsm_live_8f3a9b1c7e6d5a4209bf184e9d2c1",
+      "permissions": [
+        "sms:send",
+        "sms:read",
+        "ussd:run",
+        "device:manage"
+      ],
+      "createdAt": "2026-09-24T18:09:02.724Z",
+      "lastUsedAt": "2026-09-24T18:16:55.679Z",
+      "expiresAt": null,
+      "isActive": true
+    },
+    {
+      "id": "key_dispatch_service",
+      "userId": "usr_admin_default",
+      "name": "OTP & Notification Microservice",
+      "key": "gsm_live_44b09c81ef40d8923a105c31",
+      "permissions": [
+        "sms:send",
+        "sms:read"
+      ],
+      "createdAt": "2026-09-24T18:09:02.724Z",
+      "lastUsedAt": null,
+      "expiresAt": null,
+      "isActive": true
+    }
+  ],
+  "devices": [
+    {
+      "id": "dev_samsung_a54_primary",
+      "userId": "usr_admin_default",
+      "name": "Samsung Galaxy A54 (Gateway #1)",
+      "model": "SM-A546B / Exynos 1380",
+      "androidVersion": "Android 14 (One UI 6.1)",
+      "batteryLevel": 94,
+      "isCharging": true,
+      "networkType": "4G LTE",
+      "signalDbm": -76,
+      "token": "gsm_dev_9a4f2c7e1b5d8a92",
+      "isOnline": true,
+      "isVirtual": false,
+      "autoSimulateReplies": true,
+      "lastHeartbeat": "2026-09-24T18:09:02.724Z",
+      "createdAt": "2026-09-24T18:09:02.724Z",
+      "simCards": [
+        {
+          "slot": 1,
+          "carrier": "Vodafone GSM",
+          "phoneNumber": "+1 202-555-0143",
+          "iccid": "89014103211118510720",
+          "signalPercent": 92,
+          "status": "ready"
+        },
+        {
+          "slot": 2,
+          "carrier": "T-Mobile International",
+          "phoneNumber": "+1 202-555-0189",
+          "iccid": "89014103211118510831",
+          "signalPercent": 84,
+          "status": "ready"
+        }
+      ]
+    },
+    {
+      "id": "dev_pixel_7a_backup",
+      "userId": "usr_admin_default",
+      "name": "Google Pixel 7a (Gateway #2)",
+      "model": "Pixel 7a / Tensor G2",
+      "androidVersion": "Android 15",
+      "batteryLevel": 82,
+      "isCharging": false,
+      "networkType": "5G",
+      "signalDbm": -82,
+      "token": "gsm_dev_f710e423d9b1c678a",
+      "isOnline": true,
+      "isVirtual": true,
+      "autoSimulateReplies": true,
+      "lastHeartbeat": "2026-09-24T18:09:02.724Z",
+      "createdAt": "2026-09-24T18:09:02.724Z",
+      "simCards": [
+        {
+          "slot": 1,
+          "carrier": "Airtel Wireless",
+          "phoneNumber": "+44 7700 900341",
+          "iccid": "89441103211118590111",
+          "signalPercent": 88,
+          "status": "ready"
+        }
+      ]
+    }
+  ],
+  "sms": [
+    {
+      "id": "sms_55f20c74747ab9fa",
+      "userId": "usr_admin_default",
+      "deviceId": "dev_samsung_a54_primary",
+      "simSlot": 1,
+      "direction": "outbound",
+      "phoneNumber": "+15559876543",
+      "message": "Automated dispatch from Antigravity Agent",
+      "status": "delivered",
+      "encoding": "GSM-7",
+      "partsCount": 1,
+      "gsmReference": "GSM-97346",
+      "createdAt": "2026-09-24T18:16:55.680Z",
+      "updatedAt": "2026-09-24T18:16:55.680Z"
+    },
+    {
+      "id": "sms_24eb50d4b341c0bb",
+      "userId": "usr_admin_default",
+      "deviceId": "dev_samsung_a54_primary",
+      "simSlot": 1,
+      "direction": "outbound",
+      "phoneNumber": "+15551234567",
+      "message": "Test verification message",
+      "status": "delivered",
+      "encoding": "GSM-7",
+      "partsCount": 1,
+      "createdAt": "2026-09-24T18:09:09.926Z",
+      "updatedAt": "2026-09-24T18:09:11.726Z",
+      "gsmReference": "GSM-57711"
+    },
+    {
+      "id": "sms_out_001",
+      "userId": "usr_admin_default",
+      "deviceId": "dev_samsung_a54_primary",
+      "simSlot": 1,
+      "direction": "outbound",
+      "phoneNumber": "+1 415-555-2671",
+      "message": "Your one-time security login code is 839210. Valid for 10 minutes.",
+      "status": "delivered",
+      "encoding": "GSM-7",
+      "partsCount": 1,
+      "gsmReference": "REF-78921",
+      "createdAt": "2026-09-24T17:51:02.725Z",
+      "updatedAt": "2026-09-24T17:52:02.725Z"
+    },
+    {
+      "id": "sms_in_001",
+      "userId": "usr_admin_default",
+      "deviceId": "dev_samsung_a54_primary",
+      "simSlot": 1,
+      "direction": "inbound",
+      "phoneNumber": "+1 415-555-2671",
+      "message": "CONFIRM 839210",
+      "status": "received",
+      "encoding": "GSM-7",
+      "partsCount": 1,
+      "createdAt": "2026-09-24T17:54:02.725Z",
+      "updatedAt": "2026-09-24T17:54:02.725Z"
+    },
+    {
+      "id": "sms_out_002",
+      "userId": "usr_admin_default",
+      "deviceId": "dev_samsung_a54_primary",
+      "simSlot": 2,
+      "direction": "outbound",
+      "phoneNumber": "+1 312-555-0198",
+      "message": "Order #48102 shipped via DHL Express. Tracking link: https://track.example.com/DHL481",
+      "status": "sent",
+      "encoding": "GSM-7",
+      "partsCount": 1,
+      "gsmReference": "REF-78922",
+      "createdAt": "2026-09-24T18:01:02.725Z",
+      "updatedAt": "2026-09-24T18:02:02.725Z"
+    },
+    {
+      "id": "sms_in_002",
+      "userId": "usr_admin_default",
+      "deviceId": "dev_samsung_a54_primary",
+      "simSlot": 2,
+      "direction": "inbound",
+      "phoneNumber": "+1 312-555-0198",
+      "message": "Thanks for the quick dispatch!",
+      "status": "received",
+      "encoding": "GSM-7",
+      "partsCount": 1,
+      "createdAt": "2026-09-24T18:05:02.725Z",
+      "updatedAt": "2026-09-24T18:05:02.725Z"
+    }
+  ],
+  "ussdSessions": [
+    {
+      "id": "ussd_ffdb35cacf55a050",
+      "userId": "usr_admin_default",
+      "deviceId": "dev_samsung_a54_primary",
+      "simSlot": 1,
+      "ussdCode": "*144#",
+      "status": "completed",
+      "sessionType": "single",
+      "steps": [],
+      "createdAt": "2026-09-24T18:09:13.434Z",
+      "responseDialog": "Vodafone GSM: Balance is $24.80. Data: 4,120 MB remaining (expires in 18 days). Airtime valid until 2026-11-30. Reply 1 for bundles, 2 for top-up.",
+      "executionTimeMs": 1146,
+      "completedAt": "2026-09-24T18:09:14.835Z"
+    },
+    {
+      "id": "ussd_001",
+      "userId": "usr_admin_default",
+      "deviceId": "dev_samsung_a54_primary",
+      "simSlot": 1,
+      "ussdCode": "*144#",
+      "status": "completed",
+      "sessionType": "single",
+      "steps": [],
+      "responseDialog": "Vodafone GSM: Your airtime balance is $38.40. Main data plan: 5.4 GB remaining, valid until 15-Nov-2026. Dial *144*1# to buy more.",
+      "executionTimeMs": 1420,
+      "createdAt": "2026-09-24T17:24:02.725Z",
+      "completedAt": "2026-09-24T17:25:02.725Z"
+    },
+    {
+      "id": "ussd_002",
+      "userId": "usr_admin_default",
+      "deviceId": "dev_samsung_a54_primary",
+      "simSlot": 2,
+      "ussdCode": "*124#",
+      "status": "completed",
+      "sessionType": "single",
+      "steps": [],
+      "responseDialog": "T-Mobile Prepaid Balance: $14.20. Unlimited nationwide minutes active. Next refill due 01-Nov-2026.",
+      "executionTimeMs": 1180,
+      "createdAt": "2026-09-24T17:44:02.725Z",
+      "completedAt": "2026-09-24T17:45:02.725Z"
+    }
+  ],
+  "webhooks": [
+    {
+      "id": "whk_main_crm",
+      "userId": "usr_admin_default",
+      "url": "https://webhook.site/gsm-demo-inbox",
+      "events": [
+        "sms.received",
+        "sms.delivered",
+        "ussd.response"
+      ],
+      "secret": "whsec_99a8b7c6d5e4f3a2b1",
+      "isActive": true,
+      "createdAt": "2026-09-24T18:09:02.724Z"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "sms_24eb50d4b341c0bb",
+      "deviceId": "dev_samsung_a54_primary",
+      "type": "send_sms",
+      "payload": {
+        "to": "+15551234567",
+        "message": "Test verification message",
+        "simSlot": 1
+      },
+      "status": "pending",
+      "createdAt": "2026-09-24T18:09:09.926Z"
+    },
+    {
+      "id": "ussd_ffdb35cacf55a050",
+      "deviceId": "dev_samsung_a54_primary",
+      "type": "run_ussd",
+      "payload": {
+        "ussdCode": "*144#",
+        "simSlot": 1
+      },
+      "status": "pending",
+      "createdAt": "2026-09-24T18:09:13.434Z"
+    }
+  ]
+}

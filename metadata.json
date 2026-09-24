@@ -1,0 +1,6 @@
+{
+  "name": "GSM Gateway & USSD Relay Engine",
+  "description": "Turn any Android smartphone into a programmatic GSM gateway for SMS dispatch, inbound message streaming, and USSD execution via REST API.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
